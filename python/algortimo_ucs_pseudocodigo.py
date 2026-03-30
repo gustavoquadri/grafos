@@ -1,6 +1,6 @@
 import heapq
 
-def uniform_cost_search(grafo, inicio, objetivo):
+def ucs(grafo, inicio, objetivo):
     # fila de prioridade: (custo_acumulado, no_atual, caminho)
     fila = []
     heapq.heappush(fila, (0, inicio, [inicio]))
@@ -37,7 +37,7 @@ grafo = {
     'D': []
 }
 
-caminho, custo = uniform_cost_search(grafo, 'A', 'D')
+caminho, custo = ucs(grafo, 'A', 'D')
 
 print("Caminho:", caminho)
 print("Custo:", custo)

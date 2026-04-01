@@ -4,14 +4,12 @@ def ucs(grafo, inicio, objetivo):
     # fila de prioridade: (custo_acumulado, no_atual, caminho)
     fila = []
     heapq.heappush(fila, (0, inicio, [inicio]))
-    
     # dicionário para guardar o menor custo já encontrado
     visitados = {}
 
     while fila:
         custo, no, caminho = heapq.heappop(fila)
         print(grafo[no])
-
         # se já visitamos com custo menor, ignoramos
         if no in visitados and visitados[no] <= custo:
             continue
